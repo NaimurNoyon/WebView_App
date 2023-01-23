@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/home_page.dart';
 import 'package:splash_screen/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      initialRoute: SplashScreen.routeName,
+      routes: {
+        HomePage.routeName:(context)=> HomePage(),
+      },
     );
   }
 }

@@ -1,11 +1,9 @@
 import 'dart:async';
-
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:splash_screen/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
+  static const String routeName='/splash_screen';
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -18,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 5),
           () {
         Navigator.push(
           context,
@@ -37,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Image.asset(
           'assets/bg.png',
-          height: 60,
+          height: 200,
         ),
       ),
     );
